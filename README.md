@@ -19,6 +19,15 @@
 1. 从 [Releases](https://github.com/imkkdev/CopyPath/releases) 下载 `CopyPath.app.zip` 并解压
 2. 将 `CopyPath.app` 拖入「应用程序」文件夹(放其他位置也可以)
 3. **双击启动一次** CopyPath.app(会弹出安装提示,这一步会让系统注册扩展,不能跳过)
+
+   > 应用未经 Apple 公证,首次打开时 macOS 会弹出「未打开 "CopyPath"」的安全警告。点「完成」(不要点「移到废纸篓」),再打开 **系统设置 → 隐私与安全性**,点底部「仍要打开」;或直接在终端执行:
+   >
+   > ```bash
+   > xattr -rd com.apple.quarantine /Applications/CopyPath.app
+   > ```
+   >
+   > 该命令移除下载时系统打上的隔离标记,不会破坏应用。自行构建(方式二)不经浏览器下载,通常不会遇到此提示。
+
 4. 打开 **系统设置 → 通用 → 登录项与扩展**,在「扩展」区域进入对应分类(Sequoia 下归入「文件提供程序」/「访达」),打开 **CopyPath** 开关
 5. 在 Finder 中右键任意文件/文件夹,菜单最外层即可看到「复制路径」
 
